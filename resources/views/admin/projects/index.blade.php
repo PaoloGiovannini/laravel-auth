@@ -23,6 +23,11 @@
                     <td>
                         <a class="btn btn-primary" href="{{route('admin.projects.show', $project->slug)}}">VEDI</a>
                         <a href="{{route('admin.projects.edit', $project->slug)}}" class="btn btn-warning">MODIFICA</a>
+                        <form class="mt-3" action="{{route('admin.projects.destroy', ['project' => $project->slug])}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">ELIMINA</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

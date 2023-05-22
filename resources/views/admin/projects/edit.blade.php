@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-10">
-        <form method="POST" action="{{ route('admin.projects.store', ['project' => $project->slug]) }}">
+        <form method="POST" action="{{ route('admin.projects.update', ['project' => $project->slug]) }}">
 
             @csrf
             @method('PUT')
