@@ -13,6 +13,12 @@
                     <span class="ms-1 d-none d-sm-inline">Projects</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('admin.projects.create')}}" class="nav-link align-middle px-0">
+                    <i class="bi bi-plus"></i>
+                    <span class="ms-1 d-none d-sm-inline">Crea nuovo progetto</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>
