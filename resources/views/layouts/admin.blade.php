@@ -14,6 +14,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
@@ -24,9 +25,17 @@
 
 
         @include('partials.header')
-        
+
         <main class="">
-            @yield('content')
+            <div class="container-fluid pt-5">
+                <div class='row flex-nowrap'>
+                    @include('partials.sidebar')
+
+
+
+                    @yield('content')
+                </div>
+            </div>
         </main>
     </div>
 </body>
