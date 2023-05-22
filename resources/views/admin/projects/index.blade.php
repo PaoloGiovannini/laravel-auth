@@ -21,12 +21,12 @@
                     <td>{{ $project->title }}</td>
                     <td>{{ $project->slug }}</td>
                     <td class="d-flex align-items-center">
-                        <a class="btn btn-primary me-2" href="{{route('admin.projects.show', $project->slug)}}">VEDI</a>
-                        <a href="{{route('admin.projects.edit', $project->slug)}}" class="btn btn-warning me-2">MODIFICA</a>
+                        <a class="btn rounded-pill btn-primary me-2" href="{{route('admin.projects.show', $project->slug)}}">VEDI</a>
+                        <a href="{{route('admin.projects.edit', $project->slug)}}" class="btn rounded-pill btn-warning me-2">MODIFICA</a>
                         <form action="{{route('admin.projects.destroy', ['project' => $project->slug])}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">ELIMINA</button>
+                            <button type="submit" class="btn rounded-pill btn-danger">ELIMINA</button>
                         </form>
                     </td>
                 </tr>
