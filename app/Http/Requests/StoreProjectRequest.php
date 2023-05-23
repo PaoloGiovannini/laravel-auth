@@ -26,7 +26,6 @@ class StoreProjectRequest extends FormRequest
         return [
             'title' => 'required|max:50',
             'content' => 'max:2000',
-            'slug' => 'required|max:100',
         ];
     }
 
@@ -36,8 +35,6 @@ class StoreProjectRequest extends FormRequest
             'title.required' => 'il titolo è obbligatorio',
             'title.max' => 'il titolo deve avere al massimo :max caratteri',
             'content.max' => 'la descizione deve avere al massimo :max caratteri',
-            'slug.max' => 'la URL dell\' immagine deve avere al massimo :max caratteri',
-            'slug.required' => 'la Url è obbligatoria',
         ];
     }
 }
